@@ -1,1 +1,3 @@
-# pirple_lectures
+# __Pirple Lectures__
+## repository for the lectures work
+##  
