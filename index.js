@@ -18,10 +18,16 @@ var config = require('./config');
 var fs = require('fs');
 var _data = require('./lib/data');
 
-// Testing
-_data.create('test','newfile',{'foo':'bar'},function(err){
+// Testing write
+/*_data.create('test','newfile',{'foo':'bar'},function(err){
   console.log('this was the error',err);
 })
+*/
+//testing read
+_data.read('test','newfile1',function(err,data){
+  console.log('this was the error',err,'and this was the data ',data);
+})
+
 
  // instantiate http
 var httpServer = http.createServer(function(req,res){
