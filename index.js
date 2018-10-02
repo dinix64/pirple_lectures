@@ -6,6 +6,7 @@
  * returning JSON
  * Adding configuration
  * Adding https
+ * storing data
  */
 
 // Dependencies
@@ -15,6 +16,22 @@ var url = require('url');
 var StringDecoder = require('string_decoder').StringDecoder;
 var config = require('./config');
 var fs = require('fs');
+var _data = require('./lib/data');
+
+// Testing write
+/*_data.create('test','newfile',{'foo':'bar'},function(err){
+  console.log('this was the error',err);
+})
+*/
+//testing read
+/*_data.read('test','newfile1',function(err,data){
+  console.log('this was the error',err,'and this was the data ',data);
+})
+*/
+//testing read
+_data.update('test','newfile',{'fizz':'buzz'},function(err){
+  console.log('this was the error',err);
+})
 
  // instantiate http
 var httpServer = http.createServer(function(req,res){
