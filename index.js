@@ -29,7 +29,12 @@ var _data = require('./lib/data');
 })
 */
 //testing read
-_data.update('test','newfile',{'fizz':'buzz'},function(err){
+/*_data.update('test','newfile',{'fizz':'buzz'},function(err){
+  console.log('this was the error',err);
+})
+*/
+//testing read
+_data.delete('test','newfile',function(err){
   console.log('this was the error',err);
 })
 
