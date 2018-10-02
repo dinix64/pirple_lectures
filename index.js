@@ -24,10 +24,14 @@ var _data = require('./lib/data');
 })
 */
 //testing read
-_data.read('test','newfile1',function(err,data){
+/*_data.read('test','newfile1',function(err,data){
   console.log('this was the error',err,'and this was the data ',data);
 })
-
+*/
+//testing read
+_data.update('test','newfile',{'fizz':'buzz'},function(err){
+  console.log('this was the error',err);
+})
 
  // instantiate http
 var httpServer = http.createServer(function(req,res){
